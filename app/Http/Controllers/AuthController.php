@@ -26,11 +26,11 @@ class AuthController extends Controller
             
             if($cek == 0){
                 $urut = 100001;
-                $kode = 'K-' . $tahun_bulan . $urut;
+                $kode = 'ID-' . $tahun_bulan . $urut;
             }else {
                 $ambil = User::all()->last();
                 $urut = (int)substr($ambil->kode, -6) + 1;
-                $kode = 'K-' . $tahun_bulan . $urut;
+                $kode = 'ID-' . $tahun_bulan . $urut;
             }
 
             $request->validate([

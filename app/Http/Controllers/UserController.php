@@ -18,13 +18,13 @@ class UserController extends Controller
         $cek = User::count();
         
         if($cek == 0){
-            $urut = 'K-' + 100001;
+            $urut = 'ID-' + 100001;
             $kode = $tahun_bulan . $urut;
             dd($kode);
         }else {
             $ambil = User::all()->last();
             $urut = (int)substr($ambil->kode, -6) + 1;
-            $kode = 'K-' . $tahun_bulan . $urut;
+            $kode = 'ID-' . $tahun_bulan . $urut;
         }
         return view('user.index', compact('user', 'kode'));
     }

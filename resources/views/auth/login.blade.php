@@ -51,11 +51,11 @@
                                     <div class="form-group">
                                         <div class="d-block">
                                             <label for="password" class="control-label text-info">Password</label>
-                                            <div class="float-right d-none">
+                                            {{-- <div class="float-right d-none">
                                                 <a href="/forgot-password" class="text-small text-info">
                                                     Lupa Password?
                                                 </a>
-                                            </div>
+                                            </div> --}}
                                             <input id="password" type="password" class="form-control" name="password"
                                                 tabindex="2" placeholder="Masukan Password">
                                             <div class="invalid-feedback">
